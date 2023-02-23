@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.poppins {
+    font-family: Poppins;
+}
+
+.navbar-edit {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: Poppins;
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.45);
+    z-index: 99;
+}
+
+.btn-order {
+    color: var(--bs-teal);
+    border-color: var(--bs-teal);
+    transition: 0.5s;
+    margin: 1px;
+}
+
+.navbar-edit .nav-link {
+    border-bottom: 1px solid transparent;
+    transition: padding-bottom .4s ease-in-out, border-color .3s ease ;
+}
+
+.navbar-edit .nav-link:hover {
+    padding-bottom: 20px;
+    border-bottom-color: var(--bs-teal);
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/test.jpg) 
+    center center fixed no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.banner .banner-description {
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+}
+
+.btn-order:hover,
+.btn-order:active {
+    color: white;
+    background-color: var(--bs-teal);
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.evenire-menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/test.jpg) center center fixed no-repeat;
+    background-size: flex;
+    height: 1400px;
+}
+
+.card-image-top {
+    background-size: contain;
+}
+
+footer {
+    background: rgba(240, 240, 240, 0.7);
+    color: white;
+}
