@@ -51,24 +51,77 @@
         </div>
     </nav>
 
-    <section class="banner d-flex justify-content-center align-items-center pt-5 navbar-edit">
-        <div class="container my-5 py-5 text-center">
-            <div class="row">
-                <div class="form-floating mb-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Adresse mail</label>
-                  </div>
-                  <div class="form-floating mb-2">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Mot de passe</label>
-                  </div>
-                  <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Repeter le mot de passe</label>
-                    <p class="text-light">1/3</p>
-                    <button type="submit" class="btn btn-outline-info rounded-0">Suivant</button>
+    <section id="register">
+        <div class="ns-f-bg ns-f-bg-random">
+    
+        </div>
+        <div class="container min-vh-100">
+            <div class="row min-vh-100">
+                <div id="register"
+                    class="ns-theme-bg ns-theme-text rounded my-5 align-self-center col-10 offset-1 col-md-8 offset-md-2">
+                    <div class="container pt-5 pb-3 d-flex flex-column align-items-center justify-content-around">
+                        <div class="row pb-3">
+                            <ns-a href="/"><img src="/res/icons/512.png" alt="nyanscan logo" class="ns-logo-auth"></ns-a>
+                        </div>
+                        <div class="row">
+                            <h2>Créer un compte</h2>
+                        </div>
+                        <div id="ns-log-error" class='row rounded mt-2 ns-b-azalea ns-text-red'>
+    
+                        </div>
+                        <div class="<?php echo  $d_class ?>">
+                            <form id="ns-re-form" class="ns-f-wrap">
+                                <div class="ns-f-w-group">
+                                    <label for="email">Adresse E-mail :</label>
+                                    <input id="email" class="form-control ns-form-pink" type="email" name="email"
+                                        required="required" ${this.app.session['register_email'] ? 'value=' +
+                                        arrayPop(this.app.session, 'register_email' ) : '' }>
+                                </div>
+                                <div class="ns-f-w-group">
+                                    <label for="username">Pseudo :</label>
+                                    <input id="username" class="form-control ns-form-pink" type="text" name="username"
+                                        required="required">
+                                </div>
+                                <div class="ns-f-w-group">
+                                    <label for="pasword">Mot de passe :</label>
+                                    <input id="pasword" class="form-control ns-form-pink" type="password" name="password"
+                                        required="required">
+                                </div>
+                                <div class="ns-f-w-group">
+                                    <label for="password-v">Confirmation :</label>
+                                    <input id="password-v" class="form-control ns-form-pink" type="password"
+                                        name="password-v" required="required">
+                                </div>
+                                <div class="ns-f-w-group">
+                                    <label for="birth">Date de naissance :</label>
+                                    <input id="birth" class="form-control ns-form-pink" type="date" name="birth"
+                                        required="required">
+                                </div>
+                                <div class="ns-f-w-group align-self-center">
+                                    <div class="form-check d-none">
+                                        <input id="ns-i-check-news" class="form-check-input  ns-form-check" type="checkbox"
+                                            name="newsletter">
+                                        <label for="ns-i-check-news" class="form-check-label">Newsletter</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input id="ns-i-check-cgu" class="form-check-input ns-form-check" type="checkbox"
+                                            name="cgu" required="required">
+                                        <label for="ns-i-check-cgu" class="form-check-label">CGU</label>
+                                    </div>
+                                </div>
+                                <div id="ns-fr-captcha" class="ns-fr-captcha">
+    
+                                </div>
+                                <button class="form-control ns-form-pink w-100 w-md-50 mx-auto mt-4"
+                                    type="submit">S'enregister</button>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <p>Tu as déja un compte ? <ns-a href="/auth/login" class="btn ns-btn-sm ns-tickle-pink-btn">Se
+                                    connecter</ns-a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6"></div>
             </div>
         </div>
     </section>
