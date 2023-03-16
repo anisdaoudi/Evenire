@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar-edit navbar navbar-expand-lg position-fixed w-100 navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="#">Evenire</a>
+            <a href="index.html" class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="#">Evenire</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,28 +44,44 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Search">
-                    <button class="btn btn-outline-success btn-order" type="submit">Connexion</button>
-                    <button class="btn btn-outline-success btn-order" type="submit">Inscription</button>
+                    <a href="connexion.html" class="btn btn-outline-success btn-order">Connexion</a>
+                    <a href="inscription1.html" class="btn btn-outline-success btn-order">Inscription</a>
                 </form>
             </div>
         </div>
     </nav>
 
-    <section class="banner d-flex justify-content-center align-items-center pt-5 navbar-edit">
-        <div class="container my-5 py-5">
-            <div class="row">
-                <div class="form-floating mb-2">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Adresse mail</label>
-                  </div>
-                  <div class="form-floating text-center">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Mot de passe</label>
-                    <p class="text-light">Mot de passe oublié ?</p>
-                    <button type="submit" class="btn btn-outline-info rounded-0">Se connecter</button>
-                  </div>
-                <div class="col-md-6"></div>
+    <section class="banner d-flex justify-content-center align-items-center pt-5 navbar-edit text-light">
+        <div>
+            <div class="row min-vh-100">
+                <div>
+                    <div class="container pt-5 pb-3 d-flex flex-column align-items-center justify-content-around">
+                        <div class="row pb-3">
+                            <img src="assets/images/Logo.jpg" alt="logo evenire" class="logo-auth">
+                        </div>
+                        <div class="row">
+                            <h2>Connexion</h2>
+                        </div>
+                        <div id="ns-log-error" class='row rounded mt-2 ns-b-azalea ns-text-red'>
+                        </div>
+                        <div>
+                            <form>
+                                <div>
+                                    <label for="username">Pseudo :</label>
+                                    <input id="username" class="form-control ns-form-pink" type="text" name="username" required="required">
+                                </div>
+                                <div>
+                                    <label for="pasword">Mot de passe :</label>
+                                    <input id="pasword" class="form-control ns-form-pink" type="password" name="password" required="required">
+                                </div>
+                                </div>
+                                <button class="form-control ns-form-pink w-100 w-md-50 mx-auto mt-4" type="submit">Se connecter</button>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </div>
     </section>
 

@@ -5,7 +5,7 @@
 }
 
 .navbar-edit {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0);
     font-family: Poppins;
     box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.45);
     z-index: 99;
@@ -70,3 +70,9 @@ footer {
     background: rgba(240, 240, 240, 0.7);
     color: white;
 }
+
+.logo-auth {
+    height: 76px;
+    width: 130px;
+}
+
