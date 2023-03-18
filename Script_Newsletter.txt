@@ -1,0 +1,25 @@
+<?php
+
+// Connexion à la base de données
+
+$pdo = new PDO('mysql:host=HOSTNAME;dbname=$$$$$$$$$$$$$', 'USERNAME', 'PASSWORD');
+
+// Récupération de toutes les adresses e-mail inscrites
+
+$stmt = $pdo->prepare('SELECT email FROM newsletter_subscribers');
+$stmt->execute();
+$emails = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
+// Envoi de l'e-mail à chaque adresse e-mail
+
+foreach ($emails as $email) {
+  $to = $email;
+  $subject = 'Notre newsletter mensuelle';
+  $message = 'Les évenements de ce mois-ci...';
+  $headers = 'From: lou.evenire@gmail.com' . "\r\n" .
+             'Reply-To: lou.evenire@gmail.com' . "\r\n" .
+             'X-Mailer: PHP/' . phpversion();
+
+  mail($to, $subject, $message, $headers);
+}
+?>
