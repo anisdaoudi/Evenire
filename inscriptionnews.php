@@ -2,7 +2,6 @@
 
 // Connexion à la base de données
 
-$pdo = new PDO('mysql:host=HOSTNAME;dbname=$$$$$$$$$$$$$', 'USERNAME', 'PASSWORD');
 
 // Récupération de l'adresse e-mail depuis le formulaire
 

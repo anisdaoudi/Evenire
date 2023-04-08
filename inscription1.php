@@ -7,49 +7,7 @@
     <title>Evenire</title>
 
 </head>
-<body>
-    <nav class="navbar-edit navbar navbar-expand-lg position-fixed w-100 navbar-dark">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="#">Evenire</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Profil</a>
-                    </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Reservation</a>
-                    </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Favoris</a>
-                    </li>
-                    <li class="nav-item dropdown pe-4">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Evenements
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item pe-4" href="#">Concerts</a></li>
-                            <li><a class="dropdown-item pe-4" href="#">Spectacle</a></li>
-                            <li><a class="dropdown-item pe-4" href="#">Theatre</a></li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Search">
-                    <a href="connexion.html" class="btn btn-outline-success btn-order">Connexion</a>
-                    <a href="inscription1.html" class="btn btn-outline-success btn-order">Inscription</a>
-                </form>
-            </div>
-        </div>
-    </nav>
+    <?php include 'header.php' ?>
 
     <section class="banner d-flex justify-content-center align-items-center pt-5 navbar-edit text-light">
         <div>
@@ -66,7 +24,7 @@
     
                         </div>
                         <div>
-                            <form>
+                            <form method="POST" action="./controller/signup.php">
                                 <div>
                                     <label for="email">Adresse E-mail :</label>
                                     <input id="email" class="form-control" type="email" name="email" required="required">

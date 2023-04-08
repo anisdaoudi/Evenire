@@ -11,7 +11,8 @@ const CAPTCHA_CODE_GOOD = 1;
 
 
 function get_captcha_status(): int {
-    if (!isset($_POST["captcha-id"])  !isset($_POST["captcha"])  !isset($_SESSION["captcha"])) {
+    if (!isset($_POST["captcha-id"]) && !isset($_POST["captcha"]) && !isset($_SESSION["captcha"]))
+    {
         return CAPTCHA_CODE_ERROR;
     }
 
@@ -30,7 +31,7 @@ function _get_captcha_settings() {
     success([
         "width" => CAPTCHA_WIDTH,
         "height" => CAPTCHA_HEIGHT,
-        "number_piece" => CAPTCHA_NUMBER_PIECE
+        "number_piece" => CAPTCHA_NUMBER_PIECE,
         "piece_size" => CAPTCHA_PIECE_SIZE,
         "cell_size" => CAPTCHA_CELL_SIZE,
 
