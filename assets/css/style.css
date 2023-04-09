@@ -76,9 +76,18 @@ footer {
     width: 130px;
 }
 
-
-
 .error{
     color: red;
     text-align: center;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.footer{
+    height: 200px;
 }
