@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+?>
+
 <div>
     <nav class="navbar-edit navbar navbar-expand-lg position-fixed w-100 navbar-dark">
         <div class="container-fluid">
@@ -31,11 +35,21 @@
                             <li><a class="dropdown-item pe-4" href="#">Theatre</a></li>
                         </ul>
                     </li>
+                    <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Search">
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Search">
-                    <a href ="connexion.php"class="btn btn-outline-success btn-order">Connexion</a>
-                    <a href="inscription1.php" class="btn btn-outline-success btn-order">Inscription</a>
+                <?php
+                    if(isset($_SESSION['userEmail'])){
+                        echo '<a href="./profile.php">Bienvenue '. $_SESSION['username'] ."</a>";
+                        echo '<a href ="./controller/logout.php"class="btn btn-outline-success btn-order">se deconnecter</a>';
+
+                    }else{
+                        echo '<a href ="connexion.php"class="btn btn-outline-success btn-order">Connexion</a>';
+                        echo '<a href="inscription1.php" class="btn btn-outline-success btn-order">Inscription</a>';
+                    }
+                ?>
+                    
+                    
                 </form>
             </div>
         </div>

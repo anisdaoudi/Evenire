@@ -24,11 +24,18 @@
     
                         </div>
                         <div>
+                            <?php 
+                                if(isset($_GET['error']) && $_GET['error'] == 'emailExists' )
+                                {
+                                    echo '<p class="error">Email déja utilisé </p>';
+                                }
+                            ?>
                             <form method="POST" action="./controller/signup.php">
                                 <div>
                                     <label for="email">Adresse E-mail :</label>
                                     <input id="email" class="form-control" type="email" name="email" required="required">
                                 </div>
+
                                 <div>
                                     <label for="username">Pseudo :</label>
                                     <input id="username" class="form-control" type="text" name="username" required="required">

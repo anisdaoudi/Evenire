@@ -25,6 +25,12 @@
                         <div class='row rounded mt-2 ns-b-azalea ns-text-red'>
                         </div>
                         <div>
+                            <?php 
+                                if(isset($_GET['error']) && $_GET['error'] == "accountNotFound")
+                                {
+                                    echo '<p class="error"> Ce compte n\'existe pas </p>';
+                                }
+                            ?>
                             <form method="POST" action="./controller/login.php">
                                 <div>
                                     <label for="email">Adresse E-mail :</label>
@@ -34,8 +40,14 @@
                                     <label for="pasword">Mot de passe :</label>
                                     <input id="pasword" class="form-control" type="password" name="password" required="required">
                                 </div>
+                                <?php 
+                                    if(isset($_GET['error']) && $_GET['error'] == "wrongpwd")
+                                    {
+                                        echo '<p class="error">Mot de passe erroné</p>';
+                                    }
+                                 ?>
                                 </div>
-                                <button class="form-control w-100 w-md-50 mx-auto mt-4 btn btn-outline-info btn-lg rounded-0 Poppins" type="submit">Se connecter</button>
+                                <button class="form-control w-100 w-md-50 mx-auto mt-4 btn btn-outline-info btn-lg rounded-0 Poppins" type="submit" name="submit">Se connecter</button>
                             </form>
                         </div>
                         <div class="row">
