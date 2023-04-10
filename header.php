@@ -16,13 +16,7 @@ session_start();
                         <a class="nav-link active" aria-current="page" href="./index.php">Accueil</a>
                     </li>
                     <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Profil</a>
-                    </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Reservation</a>
-                    </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="#">Favoris</a>
+                        <a class="nav-link" href="profile.php">Profil</a>
                     </li>
                     <li class="nav-item dropdown pe-4">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
