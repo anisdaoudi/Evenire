@@ -21,7 +21,7 @@
                     </h1>
                     <p>
                         <button class="btn btn-outline-info btn-lg rounded-0 Poppins">Reserver</button>
-                    </p>
+                    </p>  
                 </div>
             </div>
         </div>
