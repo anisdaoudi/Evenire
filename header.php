@@ -5,7 +5,7 @@ session_start();
 <div>
     <nav class="navbar-edit navbar navbar-expand-lg position-fixed w-100 navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="#">Evenire</a>
+            <a class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="./index.php">Evenire</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
