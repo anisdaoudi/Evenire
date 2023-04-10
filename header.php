@@ -49,9 +49,7 @@ session_start();
                 <form class="d-flex" role="search">
                 <?php
                     if(isset($_SESSION['userEmail'])){
-                        if($_SESSION['isAdmin']){
                         echo '<a href ="./controller/logout.php"class="btn btn-outline-success btn-order">se deconnecter</a>';
-                        }
                     }else{
                         echo '<a href ="connexion.php"class="btn btn-outline-success btn-order">Connexion</a>';
                         echo '<a href="inscription1.php" class="btn btn-outline-success btn-order">Inscription</a>';
