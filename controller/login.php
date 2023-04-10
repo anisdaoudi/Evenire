@@ -42,6 +42,7 @@ echo ("</pre>");
 $_SESSION['userId'] = $data["id_utilisateur"];
 $_SESSION["userEmail"] = $data['email'];
 $_SESSION["username"] = $data['pseudo'];
+$_SESSION['isAdmin'] = $data['certification'];
 
 var_dump($_SESSION);
 header('location:../index.php');

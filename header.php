@@ -40,6 +40,9 @@ session_start();
                 <form class="d-flex" role="search">
                 <?php
                     if(isset($_SESSION['userEmail'])){
+                        if($_SESSION['isAdmin']){
+                            echo ' <div> <a href="./backoffice/index.php">Bienvenue '. $_SESSION['username'] ."</a> </div>";
+                        }
                         echo '<a href="./backoffice/index.php">Bienvenue '. $_SESSION['username'] ."</a>";
                         echo '<a href ="./controller/logout.php"class="btn btn-outline-success btn-order">se deconnecter</a>';
 
