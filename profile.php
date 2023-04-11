@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,10 @@
 
 </head>
 <body>
-    <?php include 'header.php' ?>
+    <?php include 'header.php' ;
+var_dump($_SESSION)
+    
+    ?>
     
 <div class="container light-style flex-grow-1 container-p-y">
 
@@ -22,7 +26,7 @@
           <div class="list-group list-group-flush account-settings-links">
             <a class="list-group-item list-group-item-action active" data-toggle="list" href="profile.php">Infos</a>
             <a class="list-group-item list-group-item-action" data-toggle="list" href="pseudo_email_change.php">Changer le pseudo et l'adresse mail</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list">Changer le mot de passe</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="password_change.php">Changer le mot de passe</a>
           </div>
         </div>
         <div class="col-md-9">
@@ -32,10 +36,19 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
+                <p class="mb-0">Pseudo</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?php echo $_SESSION['username'] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
                 <p class="mb-0">Nom et prénom</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Daoudi Anis</p>
+                <p class="text-muted mb-0"><?php echo $_SESSION['lastname'] .' '. $_SESSION['firstname'] ?></p>
               </div>
             </div>
             <hr>
@@ -44,16 +57,7 @@
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">anis@evenire.online</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Téléphone</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">0122334455</p>
+                <p class="text-muted mb-0"><?php echo $_SESSION['userEmail'] ?></p>
               </div>
             </div>
             <hr>
@@ -62,16 +66,7 @@
                 <p class="mb-0">Date de naissance</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">26/10/1998</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Adresse</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">10 Rue de Paris, FR</p>
+                <p class="text-muted mb-0"><?php echo $_SESSION['birthdate'] ?></p>
               </div>
             </div>
           </div>
