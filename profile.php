@@ -31,47 +31,47 @@ var_dump($_SESSION)
         </div>
         <div class="col-md-9">
           <div class="tab-content">
-                <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Pseudo</p>
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Pseudo</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0"><?php echo $_SESSION['username'] ?></p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Nom et prénom</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0"><?php echo $_SESSION['lastname'] .' '. $_SESSION['firstname'] ?></p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Email</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0"><?php echo $_SESSION['userEmail'] ?></p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <p class="mb-0">Date de naissance</p>
+                  </div>
+                  <div class="col-sm-9">
+                    <p class="text-muted mb-0"><?php echo $_SESSION['birthdate'] ?></p>
+                  </div>
+                </div>
               </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['username'] ?></p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Nom et prénom</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['lastname'] .' '. $_SESSION['firstname'] ?></p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['userEmail'] ?></p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Date de naissance</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['birthdate'] ?></p>
-              </div>
-            </div>
           </div>
         </div>
-            </div>
 
 
         </div>

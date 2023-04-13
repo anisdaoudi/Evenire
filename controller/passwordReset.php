@@ -1,4 +1,7 @@
 <?php
+include '../pdo.php';
+session_start();
+
 
 $oldpwd = $_POST['oldPassword'];
 $newpwd = $_POST['newPassword'];
@@ -16,4 +19,29 @@ if($newpwd !== $pwdconfirm)
     exit();
 }
 
-$query = $pdo->prepare('select mdp from compte where id_utilisateur = ?');
+$hashedPwd = hash('sha256',$oldpwd);
+$userId = $_SESSION['userId']; 
+
+var_dump($userId);
+var_dump($hashedPwd);
+
+$query = $pdo->prepare('select * from compte where id_utilisateur = ? and mdp = ?');
+$query->execute([$userId,$hashedPwd]);
+
+$userData = $query->fetch();
+
+echo '<pre>';
+var_dump($userData);
+echo '</pre>';
+
+if(!$userData){
+    header('location:../password_change.php?error=wrongPwd');
+    exit();
+}
+
+
+$hashedNewPwd = hash('sha256',$newpwd);
+
+$query = $pdo->prepare('UPDATE compte SET mdp = ? WHERE id_utilisateur = ?');
+$query->execute([$hashedNewPwd,$userId]);
+header('location:../password_change.php?');

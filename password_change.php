@@ -30,16 +30,36 @@
             <form action="./controller/passwordReset.php" method="post">
 
               <div class="form-group">
+                
+
+
                 <label class="form-label">Ancien mot de passe</label>
                 <input type="password" class="form-control" name="oldPassword" placeholder="********">
-              
+                <?php 
+                    if(isset($_GET['error']) && $_GET['error'] == 'wrongPwd')
+                    {
+                        echo '<p class="error"> Mot de passe erroné </p>';
+                    }
+                ?>
+
+
                 <label class="form-label">Nouveau mot de passe</label>
                 <input type="password" class="form-control" name="newPassword" placeholder="********">
-              </div>
-              
-              <div class="form-group">
+
+
                 <label class="form-label">Retaper le nouveu mot de passe</label>
                 <input type="password" class="form-control" name="passwordConfirm" placeholder="********">
+
+
+                <?php 
+                    if(isset($_GET['error'])){
+                      if($_GET['error'] == 'confirmError' || $_GET['error'] == 'emptyfield'){
+                        echo '<p class="error"> Entrez et confirmez votre mot de passe </p>';
+                      }
+                    }
+                ?>
+
+
               </div>
               <div class="text-right mt-3 text-center pb-3">
                 <button type="submit" class="btn btn-primary">Sauvegarder les changements</button>&nbsp;
