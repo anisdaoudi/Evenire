@@ -83,6 +83,7 @@
                                             <th scope="col">Abonnements</th>
                                             <th scope="col">Abonnés</th>
                                             <th scope="col">Droits</th>
+                                            <th scope="col">Modifications</th>
 
                                         </tr>
                                     </thead>
@@ -98,6 +99,7 @@
                                             <td>'.$user['abonnements'].'</td>
                                             <td>'.$user['nb_abonnés'].'</td>
                                             <td>'.isAdmin($user['certification']).'</td>
+                                            <td> <a href="./deleteAccount.php?id='. $user['id_utilisateur'] .'">DELETE </a> </td>
                                         </tr>
                                         ';
                                     }
