@@ -38,5 +38,3 @@ $query = $pdo->prepare( "INSERT INTO compte (abonnements,nb_abonnés,date_de_nai
 $query->execute([$birthdate,$password,$email,$username,$lastname,$firstname]);
 
 header("location:../connexion.php");  
-
-?>
