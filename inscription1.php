@@ -27,7 +27,7 @@
                             <?php 
                                 if(isset($_GET['error']) && $_GET['error'] == 'emailExists' )
                                 {
-                                    echo '<p class="error">Email déja utilisé </p>';
+                                    echo '<p> class="error">Email déja utilisé </p>';
                                 }
                             ?>
                             <form method="POST" action="./controller/signup.php">
