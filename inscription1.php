@@ -77,7 +77,7 @@
                             </form>
                         </div>
                         <div class="row">
-                            <p>Tu as déja un compte ? <a href="connexion.html" class="text-light">Se connecter</a></p>
+                            <p>Tu as déja un compte ? <a href="connexion.php" class="text-light">Se connecter</a></p>
                         </div>
                     </div>
                 </div>
