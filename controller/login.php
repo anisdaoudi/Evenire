@@ -42,11 +42,6 @@ echo ("</pre>");
 $_SESSION['userId'] = $data["id_utilisateur"];
 $_SESSION["userEmail"] = $data['email'];
 $_SESSION["username"] = $data['pseudo'];
-$_SESSION["lastname"] = $data['nom'];
-$_SESSION["firstname"] = $data['prenom'];
-$_SESSION['isAdmin'] = $data['certification'];
-$_SESSION['birthdate'] = $data['date_de_naissance'];
-
 
 var_dump($_SESSION);
 header('location:../index.php');
