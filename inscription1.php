@@ -30,7 +30,7 @@
                                     echo '<p> class="error">Email déja utilisé </p>';
                                 }
                             ?>
-                            <form method="POST" action="./controller/signup.php">
+                            <form method='POST' action="./controller/signup.php">
                                 <div>
                                     <label for="email">Adresse E-mail :</label>
                                     <input id="email" class="form-control" type="email" name="email" required="required">
