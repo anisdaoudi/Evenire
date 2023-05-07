@@ -5,7 +5,7 @@ session_start();
 <div>
     <nav class="navbar-edit navbar navbar-expand-lg position-fixed w-100 navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="#">Evenire</a>
+            <a class="navbar-brand text-uppercase fw-bolder mx-4 py-3" href="./index.php">Evenire</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -15,9 +15,24 @@ session_start();
                     <li class="nav-item pe-4">
                         <a class="nav-link active" aria-current="page" href="./index.php">Accueil</a>
                     </li>
-                    <li class="nav-item pe-4">
-                        <a class="nav-link" href="profile.php">Profil</a>
-                    </li>
+
+                    <?php
+                    if(isset($_SESSION['userEmail'])){
+                        if($_SESSION['isAdmin']){
+                           echo '
+                            <li class="nav-item pe-4">
+                                <a class="nav-link" href="./backoffice/index.php">Backoffice</a>
+                            </li>
+                        ';
+                        }
+                        echo '
+                        <li class="nav-item pe-4">
+                            <a class="nav-link" href="profile.php">Profil</a>
+                        </li>
+                        ';
+
+                    }
+                    ?>
                     <li class="nav-item dropdown pe-4">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -34,9 +49,7 @@ session_start();
                 <form class="d-flex" role="search">
                 <?php
                     if(isset($_SESSION['userEmail'])){
-                        echo '<a href="./backoffice/index.php">Bienvenue '. $_SESSION['username'] ."</a>";
                         echo '<a href ="./controller/logout.php"class="btn btn-outline-success btn-order">se deconnecter</a>';
-
                     }else{
                         echo '<a href ="connexion.php"class="btn btn-outline-success btn-order">Connexion</a>';
                         echo '<a href="inscription1.php" class="btn btn-outline-success btn-order">Inscription</a>';

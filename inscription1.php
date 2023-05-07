@@ -35,7 +35,14 @@
                                     <label for="email">Adresse E-mail :</label>
                                     <input id="email" class="form-control" type="email" name="email" required="required">
                                 </div>
-
+                                <div>
+                                    <label for="username">Nom :</label>
+                                    <input id="username" class="form-control" type="text" name="firstname" required="required">
+                                </div>
+                                <div>
+                                    <label for="username">Prenom :</label>
+                                    <input id="username" class="form-control" type="text" name="lastname" required="required">
+                                </div>
                                 <div>
                                     <label for="username">Pseudo :</label>
                                     <input id="username" class="form-control" type="text" name="username" required="required">

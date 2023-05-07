@@ -1,6 +1,5 @@
-<!DOCTYPE .php>
-<.php lang="en">
-
+<?php
+?>
 <head>
     <meta charset="utf-8">
     <title>DASHMIN - Bootstrap Admin Template</title>
@@ -54,7 +53,7 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
+                        <h6 class="mb-0"><?php $_SESSION['username'] ?></h6>
                         <span>Admin</span>
                     </div>
                 </div>
