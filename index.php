@@ -20,7 +20,7 @@
                         Bienvenu sur EVENIRE
                     </h1>
                     <p>
-                        <button class="btn btn-outline-info btn-lg rounded-0 Poppins">Liste des evenements</button>
+                        <button class="btn btn-outline-info btn-lg rounded-0 Poppins">Reserver</button>
                     </p>  
                 </div>
             </div>
@@ -38,7 +38,9 @@
                         <div class="col-md-6">
                             <div class="card-body">
                                 <h5 class="card-title">Concerts</h5>
-                                <p class="card-text">Assistez à des concerts inoubliables avec notre programmation musicale variée ! Pop, classique, hip-hop, musiques du monde et rock sont au rendez-vous. Découvrez les plus grands artistes du moment, des stars internationales aux musiciens locaux, et vivez des soirées mémorables dans une ambiance conviviale. Réservez dès maintenant !.</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This content is a little bit longer.</p>
+                                <p class="card-text"><a href="#" class="text-muted btn">Plus d'infos</a></p>
                             </div>
                         </div>
                     </div>
@@ -48,7 +50,9 @@
                         <div class="col-md-6">
                             <div class="card-body">
                                 <h5 class="card-title">Spectacles</h5>
-                                <p class="card-text">Envie de rire et de passer une soirée légère ? Venez découvrir notre sélection de spectacles de comédie ! Des humoristes de renom et des talents émergents vous feront vivre des moments hilarants avec des sketches déjantés, des imitations savoureuses et des jeux de mots improbables. Rire garanti !</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This content is a little bit longer.</p>
+                                <p class="card-text"><a href="#" class="text-muted btn">Plus d'infos</a></p>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -70,13 +74,13 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/images/theatre.jpg" class="d-block w-100" alt="Theatre">
+                                        <img src="assets/images/theatre.jpg" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/images/spectacles.jpg" class="d-block w-100" alt="Spectacle">
+                                        <img src="assets/images/theatre.jpg" class="d-block w-100" alt="...">
                                     </div>
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/theatre.jpg" class="d-block w-100" alt="Theatre">
+                                    <div class="carousel-item">
+                                        <img src="assets/images/theatre.jpg" class="d-block w-100" alt="...">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -94,7 +98,9 @@
                         <div class="col-md-6">
                             <div class="card-body">
                                 <h5 class="card-title">Theatre</h5>
-                                <p class="card-text">Découvrez notre saison théâtrale ! Nous avons sélectionné pour vous des spectacles de qualité qui sauront vous faire rire, pleurer, réfléchir et vous émouvoir. Du théâtre classique aux créations contemporaines, nos artistes talentueux vous offriront des moments de théâtre intenses et inoubliables. Réservez dès maintenant vos places !.</p>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This content is a little bit longer.</p>
+                                <p class="card-text"><a href="#" class="text-muted btn">Plus d'infos</a></p>
                             </div>
                         </div>
                     </div>
@@ -110,7 +116,8 @@
     <nav class="footer-nav">
         <a class="nav-link" href="#">Accueil</a>
         <a class="nav-link" href="#">Evenements</a>
-        <a class="nav-link" href="profile.php">Profil</a>
+        <a class="nav-link" href="#">Profil</a>
+        <a class="nav-link" href="#">Contacts</a>
     </nav>
 </footer>
 </html>

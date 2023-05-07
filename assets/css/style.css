@@ -135,12 +135,3 @@ footer {
     height: 1px;
     opacity: 0;
 }
-
-.card-title{
-    font-weight: bold;
-    font-size: 50px;
-}
-
-.card-text{
-    font-size: 26px;
-}
